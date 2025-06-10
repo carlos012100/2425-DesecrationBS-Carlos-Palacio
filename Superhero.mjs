@@ -1,7 +1,8 @@
+import Character from "./Character.mjs"
 export default class Superhero extends Character {
 
-    constructor(){
-        super(intelligence, strength, speed, durability, power, combat)
+    constructor(name, intelligence, strength, speed, durability, power, combat){
+        super(name,intelligence, strength, speed, durability, power, combat)
 
 
     }

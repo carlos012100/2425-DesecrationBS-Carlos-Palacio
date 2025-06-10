@@ -1,7 +1,8 @@
 export default class Character {
 
-    constructor (intelligence, strength, speed, durability, power, combat)
+    constructor (name, intelligence, strength, speed, durability, power, combat)
     {
+        this.name = name;
         this.intelligence = intelligence
         this.strength = strength
         this.speed = speed;
