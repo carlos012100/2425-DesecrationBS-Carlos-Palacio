@@ -1,8 +1,10 @@
 
 import Die from "./Die.mjs"
 import TrainingGround from "./TrainingGround.mjs";
+import Combat from "./Combat.mjs";
 
 let allCharacterArray = [];
+
 
 const values = new Die()
 
@@ -27,5 +29,7 @@ async function LoadData() {
 
 const characterFactory = new TrainingGround(allCharacterArray)
 
-characterFactory.createSuperHero()  
-characterFactory.createVillain()
+const hero = characterFactory.createSuperHero();
+const Villain = characterFactory.createVillain();
+const fighters = [hero,Villain]
+const combat = new Combat(fighters, values)

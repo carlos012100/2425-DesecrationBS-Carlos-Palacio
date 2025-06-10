@@ -37,12 +37,22 @@ export default class TrainingGround
 
         const newHero = new Superhero(this.selectedHero.name, intelligence,strength,speed,durability,power,combat)
         
-        console.log(newHero)
+        return newHero
         
         
     }
     createVillain()
     {
+   
+
+        for(let i = 0; i < this.getData().length; i++)
+        {         
+        if (this.getData()[i].name.includes("Junkpile") || this.getData()[i].name.includes("VillainZarate")){
+
+            this.selectedVillain = this.getData()[i]
+
+        }
+        }
         const intelligence = this.selectedVillain.powerstats.intelligence
         const strength = this.selectedVillain.powerstats.strength
         const speed = this.selectedVillain.powerstats.speed
@@ -50,15 +60,10 @@ export default class TrainingGround
         const power = this.selectedVillain.powerstats.power
         const combat = this.selectedVillain.powerstats.combat
 
-        for(let i = 0; i < this.getData().length; i++)
-        {         
-        if (this.getData()[i].name.includes("Junkpile") || this.getData()[i].name.includes("VillainZarate")){
-            this.selectedVillain = this.getData()[i]
-        }
-        break;
-        }
         const newVillain = new Villain (this.selectedVillain.name, intelligence, strength, speed, durability,power,combat)
         console.log(newVillain)
+
+        return newVillain
 
     }
 }
