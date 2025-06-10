@@ -1,5 +1,9 @@
 
+import Die from "./Die.mjs"
+
 let allCharacterArray = [];
+
+const values = new Die()
 
 
 async function LoadData() {
@@ -9,6 +13,13 @@ async function LoadData() {
     return data;
   }
   
-  allCharacterArray = LoadData();
+//   allCharacterArray = LoadData();
+
+  values.createD3()
+  values.createD5()
+  values.createD20()
+  values.createD100();
+
+
 
   

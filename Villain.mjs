@@ -1,7 +1,7 @@
 export default class Villain extends Character {
 
-    constructor(){
-
+    constructor(intelligence, strength, speed, durability, power, combat){
+        super(intelligence, strength, speed, durability, power, combat)
 
     }
 
